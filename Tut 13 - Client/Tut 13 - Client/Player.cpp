@@ -66,7 +66,7 @@ void Player::movement()
 
 void Player::Boundary()
 {
-	if (m_position.x < 0 - m_shape.getRadius())
+	/*if (m_position.x < 0 - m_shape.getRadius())
 	{
 		m_position.x = WINDOW_WIDTH;
 	}
@@ -82,6 +82,24 @@ void Player::Boundary()
 	else if (m_position.y > WINDOW_HEIGHT + m_shape.getRadius())
 	{
 		m_position.y = 0;
+	}*/
+
+	if (m_position.x < 0 + m_shape.getRadius())
+	{
+		m_position.x = 0 + m_shape.getRadius();
+	}
+	else if (m_position.x > WINDOW_WIDTH - m_shape.getRadius())
+	{
+		m_position.x = WINDOW_WIDTH - m_shape.getRadius();
+	}
+
+	if (m_position.y < 0 + m_shape.getRadius())
+	{
+		m_position.y = 0 + m_shape.getRadius();
+	}
+	else if (m_position.y > WINDOW_HEIGHT - m_shape.getRadius())
+	{
+		m_position.y = WINDOW_HEIGHT - m_shape.getRadius();
 	}
 }
 

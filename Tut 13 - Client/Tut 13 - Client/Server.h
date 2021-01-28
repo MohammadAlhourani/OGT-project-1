@@ -38,6 +38,8 @@ public: //Public functions
 
 	void settupGame();
 
+	void EndGame(GameEnd gEnd);
+
 	void ChangeGameState(GameState t_state);
 
 	int getConnectionAmount();

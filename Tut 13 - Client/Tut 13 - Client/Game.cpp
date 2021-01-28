@@ -87,7 +87,7 @@ void Game::setTimer(float t_time)
 	timer = t_time;
 }
 
-void Game::setGameEndMsg(sf::String t_msg)
+void Game::setGameEndMsg(std::string t_msg)
 {
 	GameFinishText.setString(t_msg);
 }
@@ -180,6 +180,10 @@ void Game::processKeys(sf::Event t_event)
 
 			m_player->setColour(sf::Color::Blue);
 
+			Enemy1.setId(1);
+
+			Enemy2.setId(2);
+
 			m_server->setPlayer(m_player);
 
 			m_server->setEnemies(Enemy1, Enemy2);
@@ -260,15 +264,17 @@ void Game::update(sf::Time t_deltaTime)
 
 			if (m_player->collisionCheck(Enemy1.getShape()) == true)
 			{
-				GameFinishText.setString("Game Finished.Green Player caught blue This game took" + std::to_string(timer));
+				GameFinishText.setString("Game Finished. \n Green Player caught blue \n This game took" + std::to_string(timer));
 				m_currentState = GameState::Finish;
 				m_server->ChangeGameState(m_currentState);
+				//m_server->EndGame(GameEnd({timer , GameFinishText.getString() + '\0' }));
 			}
 			else if (m_player->collisionCheck(Enemy2.getShape()) == true)
 			{
-				GameFinishText.setString("Game Finished.Red Player caught blue  This game took" + std::to_string(timer));
+				GameFinishText.setString("Game Finished.\n Red Player caught blue \n This game took" + std::to_string(timer));
 				m_currentState = GameState::Finish;
 				m_server->ChangeGameState(m_currentState);
+				//m_server->EndGame(GameEnd({ timer , GameFinishText.getString() + '\0' }));
 			}
 		}
 	}

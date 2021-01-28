@@ -1,14 +1,2 @@
-﻿  Client.cpp
-  ClientIni.cpp
-  Enemy.cpp
-  Game.cpp
-  Packet.cpp
-  PacketManager.cpp
-  PacketStructs.cpp
-  Player.cpp
-  SendGetMethods.cpp
-  Server.cpp
-C:\Users\neron\OneDrive\Documents\GitHub\OGT-project-1\Tut 13 - Client\Tut 13 - Client\Server.cpp(112,20): warning C4018: '<': signed/unsigned mismatch
-  Source.cpp
-  Generating Code...
+﻿  Game.cpp
   Tut 13 - Client.vcxproj -> C:\Users\neron\OneDrive\Documents\GitHub\OGT-project-1\Tut 13 - Client\Debug\Tut 13 - Client.exe

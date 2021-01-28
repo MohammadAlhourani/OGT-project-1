@@ -28,7 +28,7 @@ struct PlayerData
 struct GameEnd
 {
 	float Time;
-	sf::String gameEndText;
+	std::string gameEndText;
 };
 
 struct GameStateUpdate

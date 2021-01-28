@@ -25,7 +25,7 @@ public:
 
 	void setTimer(float t_time);
 
-	void setGameEndMsg(sf::String t_msg);
+	void setGameEndMsg(std::string t_msg);
 
 private:
 

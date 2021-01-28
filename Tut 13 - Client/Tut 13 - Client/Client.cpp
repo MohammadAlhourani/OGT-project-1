@@ -110,7 +110,7 @@ bool Client::ProcessPacketType(PacketType packetType)
 
 		m_game->setTimer(gEnd.Time);
 
-		m_game->setGameEndMsg(gEnd.gameEndText);
+		m_game->setGameEndMsg(gEnd.gameEndText);	
 
 		break;
 	}

@@ -107,6 +107,20 @@ void Server::settupGame()
 	}
 }
 
+void Server::EndGame(GameEnd gEnd)
+{
+	for (int i = 0; i < m_connections.size(); i++)
+	{
+		GameEnd gameEnding;
+
+		gameEnding = gEnd;
+
+		PS::gameEndMsg gem(gameEnding);
+
+		m_connections[i]->m_pm.Append(gem.toPacket(PacketType::GameEndMessage));
+	}
+}
+
 void Server::ChangeGameState(GameState t_state)
 {
 	for (int i = 0; i < m_connections.size(); i++)
